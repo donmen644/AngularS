@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ListTaskComponent } from './task/list-task/list-task.component';
 import { CreateTaskComponent } from './task/create-task/create-task.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon'; 
+import {MatButtonModule} from '@angular/material/button'; 
 
 const appRoutes: Routes = [
 
@@ -28,7 +30,11 @@ const appRoutes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    RouterModule
+    RouterModule,
+    MatIconModule,
+    MatButtonModule,
+
+
 
   ],
 

@@ -1,22 +1,40 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router'
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { ListTaskComponent } from './task/list-task/list-task.component';
+import { CreateTaskComponent } from './task/create-task/create-task.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-@NgModule({
+const appRoutes: Routes = [
+
+  {path: 'list', component: ListTaskComponent},
+  {path: 'create', component: CreateTaskComponent},
+
+]
+@NgModule ({
+
   declarations: [
     AppComponent,
-    HeaderComponent
-  ],
-  imports: [
+    HeaderComponent,
+    ListTaskComponent,
+    CreateTaskComponent
+],
+    imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    RouterModule
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
+
 })
+
 export class AppModule { }
